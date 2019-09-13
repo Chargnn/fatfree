@@ -11,15 +11,8 @@ $f3->config('config.ini');
 
 $f3->route('GET /',
 	function($f3) {
-		$f3->set('content','welcome.htm');
-		echo View::instance()->render('layout.htm');
-	}
-);
-
-$f3->route('GET /userref',
-	function($f3) {
         $controller = new IndexController($f3);
-        echo $controller->view();
+        $controller->view();
 	}
 );
 

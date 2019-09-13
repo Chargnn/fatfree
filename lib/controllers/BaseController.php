@@ -11,5 +11,7 @@ abstract class BaseController {
         $this->view = View::instance();
     }
 
-    abstract public function view();
+	public function getView(){
+    	return $this->view;
+	}
 }

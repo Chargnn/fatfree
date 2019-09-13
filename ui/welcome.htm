@@ -18,22 +18,6 @@
 	<p>When you're ready to write your F3-enabled site, you can start editing the rest of the code contained in the <code>index.php</code> file that displayed this Web page. Developing PHP applications will never be the same!</p>
 	<h2>PHP Dependencies</h2>
 	<p>Some framework features in this version will not be available if PHP is not configured with the modules needed by your application.</p>
-	<table>
-		<tr>
-			<th>Class/Plug-in</th>
-			<th>PHP Module</th>
-		</tr>
-		<?php foreach ($classes as $class=>$modules): ?>
-		<tr>
-			<td><?php echo $class; ?></td>
-			<td>
-				<?php foreach ($modules as $module): ?>
-				<input type="checkbox" <?php echo extension_loaded($module)?'checked':''?> onclick="return false"> <?php echo $module; ?><br>
-				<?php endforeach; ?>
-			</td>
-		</tr>
-		<?php endforeach; ?>
-	</table>
 	<ul>
 	<li>The <code>Base</code> class requires all listed PHP modules enabled to function properly.</li>
 	<li>The <code>Cache</code> class will use any available module in the list. If none can be found, it will use the filesystem as fallback.</li>

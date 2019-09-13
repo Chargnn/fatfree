@@ -6,6 +6,6 @@ class IndexController extends BaseController {
     public function view()
     {
         $this->f3->set('content','welcome.htm');
-        return $this->view->render('layout.htm');
+        return $this->getView()->render('layout.htm');
     }
 }
